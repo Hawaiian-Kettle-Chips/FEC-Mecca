@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const baseURL = process.env.API_URL;
+const baseURL = process.env.PRODUCTS_API_URL;
 
 module.exports = {
   getProductByID: (req, res) => {
