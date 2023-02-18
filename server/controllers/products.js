@@ -15,6 +15,7 @@ module.exports = {
     };
     axios(options)
       .then((result) => {
+        console.log('GUSLOG', result.data);
         res.status(200).json(result.data);
       })
       .catch((err) => {

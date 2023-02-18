@@ -2,6 +2,7 @@ import React from 'react';
 import generateStars from '../../Sub_RatingsReviews/generateStars.js';
 
 export default function ProdInfo({ thisProduct, thisPrice, thisAvgRating }) {
+  console.log('GUSLOG:', thisProduct, thisPrice);
   // =================== HELPERS ===================
   const {
     category,
