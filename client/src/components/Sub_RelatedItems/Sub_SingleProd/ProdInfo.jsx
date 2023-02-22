@@ -13,11 +13,14 @@ export default function ProdInfo({ thisProduct, thisPrice, thisAvgRating }) {
   let niceOriginalPrice;
   let niceSalePrice;
 
-  if (thisPrice[0]) {
-    niceOriginalPrice = thisPrice[0].slice(0, thisPrice[0].length - 3);
-  }
-  if (thisPrice[1]) {
-    niceSalePrice = thisPrice[1].slice(0, thisPrice[0].length - 3);
+  // TODO: this is a hack fix, we need safer checks for null data
+  if (thisPrice[0]?.length) {
+    if (thisPrice[0]) {
+      niceOriginalPrice = thisPrice[0].slice(0, thisPrice[0].length - 3);
+    }
+    if (thisPrice[1]) {
+      niceSalePrice = thisPrice[1].slice(0, thisPrice[0].length - 3);
+    }
   }
 
   // =================== COMPONENT ===================
